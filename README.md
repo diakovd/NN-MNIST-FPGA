@@ -5,40 +5,45 @@ by CSI2 camera interface. At every 28 row of image, the output is set 22 reqogni
 Progect is run in simulation. And compiled for xc7a15ticpg236-1L device in Vivado. Not hardware tested
 
 ## Structure
-------------
+
 nn_mnist.sv
-------------
 
-                 +----------+         +----------------------+         +---------------+                                          
-MIPI interface   |          |  raw10  | raw10 to RGB         |  Gray8  |               |  out digit                   
----------------->| csi2 rx  |-------->| to Gray scale        |-------->| nn_28x28_pixl |------------>                                                
-                 |          |         | 640x480 pixel stream |         |               |                          
-                 +----------+         +----------------------+		   +---------------+
+```sh
+                 +----------+         +----------------------+         +---------------+              
+MIPI interface   |          |  raw10  | raw10 to RGB         |  Gray8  |               |  out digit  
+---------------->| csi2 rx  |-------->| to Gray scale        |-------->| nn_28x28_pixl |------------>
+                 |          |         | 640x480 pixel stream |         |               |                 
+                 +----------+         +----------------------+	       +---------------+
+		 
+```
 
-------------
 raw10toRGB.sv
-------------
+
+```sh
          +------------+      +------------+      +------------+      +------------+
-raw10    |            |  	 |            |      |            |      |            |
+raw10    |            |      |            |      |            |      |            |
 -------->| ram line0  |----->| ram line1  |----->| ram line2  |----->| ram line3  |
          | buffer     |      | buffer     |      | buffer     |      | buffer     |    
          +------------+      +------------+      +------------+      +------------+
-									|					|					|
-									|					|					|
-									|					|			        |    +---------------+
-									|					|			        |    |               | rgb10
-									+-------------------+-------------------+--->| Debaer filter |-------->
-																	             | buffer        |
-																	             +---------------+
+				    |			|		    |
+				    |   		|		    |
+				    |			|	            |    +---------------+
+				    |			|	            |    |               | rgb10
+				    +-------------------+-------------------+--->| Debaer filter |-------->
+										 | buffer        |
+								                 +---------------+
+```
 
-------------
 nn_28x28_pixl.sv
-------------
+
+```sh
          +------------+          +---------------+      +----------------+      +-------------+
 rgb10    |            |  Gray8	 | ram 28 line1s |      | ram 28 line1s  |      | Neural      | out digit 
 -------->| to Gray8   |--------->| rx buffer     |----->| convertion     |----->| net         |----------->
          |            |          |               |      | buffer         |      | calculation |  
          +------------+          +---------------+      +----------------+      +-------------+
+```
+
 
 ## Folders
 - rtl_source - fpga source  
