@@ -1,0 +1,30 @@
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.6.0">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/"
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:libraw="http://ns.libraw.com/librawxmp/1.0/"
+            xmlns:crs="http://ns.adobe.com/camera-raw-settings/1.0/">
+         <photoshop:SidecarForExtension>RAW</photoshop:SidecarForExtension>
+         <xmp:MetadataDate>2021-04-20T10:23:51+03:00</xmp:MetadataDate>
+         <libraw:MetaDataDate>2021-04-20T10:23:51+03:00</libraw:MetaDataDate>
+         <libraw:Version>10703</libraw:Version>
+         <libraw:FRVS>BLE:1/0/0.75/0.70;AE:0/1/1.00/2/6400;WB:0/0/0;CNTR:4/0;FBW:0;CM:0/0;XMP:0/1/2/1</libraw:FRVS>
+         <libraw:Contrast>9</libraw:Contrast>
+         <libraw:Exposure>0.700000</libraw:Exposure>
+         <libraw:WBCoeffs>
+            <rdf:Seq>
+               <rdf:li>1.00000</rdf:li>
+               <rdf:li>1.00000</rdf:li>
+               <rdf:li>1.00000</rdf:li>
+               <rdf:li>1.00000</rdf:li>
+            </rdf:Seq>
+         </libraw:WBCoeffs>
+         <crs:ProcessVersion>6.700000</crs:ProcessVersion>
+         <crs:Exposure2012>0.000000</crs:Exposure2012>
+         <crs:Contrast2012>0</crs:Contrast2012>
+         <crs:Whites2012>0</crs:Whites2012>
+         <crs:Blacks2012>0</crs:Blacks2012>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
