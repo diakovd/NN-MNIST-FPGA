@@ -1,7 +1,7 @@
 ## NN MNIST FPGA 
 Purpose of this progect realise simple Neural Nets on FPGA.
 Progect get 640x480 image, contained ~374 28x28 pixel MNIST sample image, 
-by CSI2 camera interface. At every 28 row of image, the output is set 22 reqognized digit.
+by CSI2 camera interface (https://github.com/diakovd/csi2_rx.git). At every 28 row of image, the output is set 22 reqognized digit.
 Progect is run in simulation. And compiled for xc7a15ticpg236-1L device in Vivado. Not hardware tested
 
 ## Structure
